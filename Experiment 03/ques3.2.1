@@ -1,0 +1,35 @@
+// WAP to enter numbers till the user wants. At the end, it should display the count of positive, negative, and Zeroes entered.
+
+#include <stdio.h>
+#include <string.h> // Required for strcmp
+
+int main() {
+    int positive = 0, negative = 0, zeroes = 0, n;
+    char ans[4];
+
+    printf("Do you want to enter a number? (yes/no): ");
+    scanf("%s", ans);
+
+    while (strcmp(ans, "yes") == 0) {
+        printf("Enter a number: ");
+        scanf("%d", &n);
+
+        if (n > 0)
+            positive++;
+        else if (n < 0)
+            negative++;
+        else
+            zeroes++;
+
+        printf("Do you want to enter another number? (yes/no): ");
+        scanf("%s", ans);
+    }
+
+    printf("\nNumber of positive numbers: %d\n", positive);
+    printf("Number of negative numbers: %d\n", negative);
+    printf("Number of zeroes: %d\n", zeroes);
+
+    return 0;
+}
+
+
