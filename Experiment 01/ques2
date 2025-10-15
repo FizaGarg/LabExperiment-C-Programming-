@@ -1,0 +1,9 @@
+ // Write a C Program to print the address in multiple lines (new line).
+#include <stdio.h>
+
+int main() {
+    printf("Fiza Garg\n");
+    printf("Moga\n");
+    printf("Pincode-142055\n");
+    return 0;
+}
