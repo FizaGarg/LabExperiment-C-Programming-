@@ -1,0 +1,43 @@
+// WAP to read a list of integers and store it in a single dimensional array.
+//  Write a C program to print the second largest integer in a list of integers. 
+
+
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int arr[50];
+
+    int largest, secLargest;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter %d integers:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // comparing first element with second
+    if(arr[0] > arr[1]) {
+        largest = arr[0];
+        secLargest = arr[1];
+    } else {
+        largest = arr[1];
+        secLargest = arr[0];
+    }
+
+    for(i = 2; i < n; i++) {    // indexing from 2 now 
+        if(arr[i] > largest) {
+            secLargest = largest;  // jo pehle largest thi abh woh sec largest ho gayi
+            largest = arr[i];  // largest will be of new index 
+        } else if(arr[i] > secLargest && arr[i] < largest) 
+         {
+            secLargest = arr[i];
+         }
+    }
+
+    printf("The 2nd largest number is: %d\n", secLargest);
+
+    return 0;
+}
