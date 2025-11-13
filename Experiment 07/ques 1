@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+
+struct Complex {
+    float real;   
+    float imag;   
+};
+
+int main() {
+    struct Complex c1, c2, sum, diff;         // can take multiple users , here taking only 2
+
+// first input
+    printf("Enter first complex number:\n");
+    printf("Enter real part: ");
+    scanf("%f", &c1.real);
+    printf("Enter imaginary part: ");
+    scanf("%f", &c1.imag);
+
+ // second input
+    printf("Enter second complex number:\n");
+    printf("Enter real part: ");
+    scanf("%f", &c2.real);
+    printf("Enter imaginary part: ");
+    scanf("%f", &c2.imag);
+
+  
+    sum.real = c1.real + c2.real;
+    sum.imag = c1.imag + c2.imag;
+
+    diff.real = c1.real - c2.real;
+    diff.imag = c1.imag - c2.imag;
+
+    printf("\nSum = %f + %f\n", sum.real, sum.imag);
+    printf("Difference = %f + %f\n", diff.real, diff.imag);
+
+    return 0;
+}
