@@ -6,7 +6,7 @@ union Address {
     char hostel_address[100];
     char city[50];
     char state[50];
-    char zip[10];
+    int zip;
 };
 
 int main() {
@@ -29,8 +29,8 @@ int main() {
     printf("State: %s\n", a.state);
 
     printf("Enter your ZIP Code: ");
-    scanf("%s", a.zip);
-    printf("ZIP Code: %s\n", a.zip);
+    scanf("%d", a.zip);
+    printf("ZIP Code: %d\n", a.zip);
 
     return 0;
 }
