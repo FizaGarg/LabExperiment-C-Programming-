@@ -1,0 +1,51 @@
+// Perform pointer arithmetic (increment and decrement) on pointers of different
+// data types. Observe how the memory addresses change and the effects on
+// data access.
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    float b = 5.5;
+    char c = 'A';
+
+    int *p1 = &a;
+    float *p2 = &b;
+    char *p3 = &c;
+
+    printf("p1 before = %p\n", p1);       
+    p1++;  
+    printf("p1 after p1++ = %p\n", p1); 
+    p1--;
+    printf("p1 after p1-- = %p\n", p1);
+    ++p1;
+    printf("p1 after ++p1 %p\n",p1);
+    --p1;
+    printf("p1 after --p1 %p\n");
+
+    printf("------------------------\n");
+
+    printf("p2 before = %p\n", p2);
+    p2++;
+    printf("p2 after p2++ = %p\n", p2);
+    p2--; 
+    printf("p2 after p2-- = %p\n", p2);
+    ++p2;
+    printf("p2 after ++p2 %p\n",p2);
+    --p2;
+    printf("p2 after --p2 %p\n");
+
+    printf("------------------------\n");
+
+    printf("p3 before = %p\n", p3);
+    p3++;   
+    printf("p3 after p3++ = %p\n", p3);
+    p3--;
+    printf("p3 after p3-- = %p\n", p3);
+    ++p3;
+    printf("p3 after ++p3 %p\n",p3);
+    --p3;
+    printf("p3 after --p3 %p\n");
+
+
+    return 0;
+}
