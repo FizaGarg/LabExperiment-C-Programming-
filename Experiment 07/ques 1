@@ -30,8 +30,9 @@ int main() {
     diff.real = c1.real - c2.real;
     diff.imag = c1.imag - c2.imag;
 
-    printf("\nSum = %f + %f\n", sum.real, sum.imag);
-    printf("Difference = %f + %f\n", diff.real, diff.imag);
+    printf("\nSum = %f + %fi\n", sum.real, sum.imag);          // represent it as a+bi ( here i is imaginary part)
+    printf("Difference = %f + %fi\n", diff.real, diff.imag);       // represent it as a-bi ( '' )
+
 
     return 0;
 }
