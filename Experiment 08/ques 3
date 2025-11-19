@@ -1,0 +1,18 @@
+// Write a function that accepts pointers as parameters. Pass variables by
+// reference using pointers and modify their values within the function.
+
+
+#include <stdio.h>
+void fun(int *x){
+   *x=30;
+
+}
+int main(){
+int y=20;
+printf("before: %d",y);
+fun(&y);
+printf("after: %d",y);
+
+return 0;
+
+}
