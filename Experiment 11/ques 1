@@ -1,0 +1,27 @@
+// Write a program to apply bitwise OR, AND and NOT operators on bit level.
+#include <stdio.h>
+int main(){
+
+int a;
+int b;
+
+printf("enter the value of a\n");
+scanf("%d",&a);
+
+printf("enter the value of b\n");
+scanf("%d",&b);
+
+printf("using AND operator->\n");
+printf("%d\n",a&b);
+
+printf("using OR operator->\n");
+printf("%d\n",a|b);
+
+printf("using NOT operator->\n");
+printf("NOT for a is %d\n",~a);
+printf("NOT for b is %d\n",~b);
+
+return 0;
+
+
+}
